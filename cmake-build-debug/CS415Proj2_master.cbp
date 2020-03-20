@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/robertsapien/Desktop/CS415Proj2-master/Client.cpp">
+			<Option target="CS415Proj2_master"/>
+		</Unit>
+		<Unit filename="/Users/robertsapien/Desktop/CS415Proj2-master/Client.hpp">
+			<Option target="CS415Proj2_master"/>
+		</Unit>
 		<Unit filename="/Users/robertsapien/Desktop/CS415Proj2-master/main.cpp">
 			<Option target="CS415Proj2_master"/>
 		</Unit>
