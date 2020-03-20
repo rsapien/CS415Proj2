@@ -9,7 +9,7 @@
 using namespace std;
 
 struct Client{
-    int sDay, eDay, wtp;
+    int sDay, eDay, wtp; // start Day, end Day, willing to pay
 };
 
 void getData(vector<Client>& Clients, ifstream& dFile){
@@ -21,7 +21,7 @@ void output(){
 }
 
 int main() {
-    vector<Client> Clients;
+    vector<Client> Clients; // array to hold clients
 
     // Getting data file
     ifstream inFile;
