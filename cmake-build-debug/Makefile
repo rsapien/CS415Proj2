@@ -123,32 +123,32 @@ CS415Proj2_master/fast:
 	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/build
 .PHONY : CS415Proj2_master/fast
 
-Client.o: Client.cpp.o
+DAG.o: DAG.cpp.o
 
-.PHONY : Client.o
+.PHONY : DAG.o
 
 # target to build an object file
-Client.cpp.o:
-	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/Client.cpp.o
-.PHONY : Client.cpp.o
+DAG.cpp.o:
+	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o
+.PHONY : DAG.cpp.o
 
-Client.i: Client.cpp.i
+DAG.i: DAG.cpp.i
 
-.PHONY : Client.i
+.PHONY : DAG.i
 
 # target to preprocess a source file
-Client.cpp.i:
-	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/Client.cpp.i
-.PHONY : Client.cpp.i
+DAG.cpp.i:
+	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/DAG.cpp.i
+.PHONY : DAG.cpp.i
 
-Client.s: Client.cpp.s
+DAG.s: DAG.cpp.s
 
-.PHONY : Client.s
+.PHONY : DAG.s
 
 # target to generate assembly for a file
-Client.cpp.s:
-	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/Client.cpp.s
-.PHONY : Client.cpp.s
+DAG.cpp.s:
+	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/DAG.cpp.s
+.PHONY : DAG.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CS415Proj2_master"
-	@echo "... Client.o"
-	@echo "... Client.i"
-	@echo "... Client.s"
+	@echo "... DAG.o"
+	@echo "... DAG.i"
+	@echo "... DAG.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

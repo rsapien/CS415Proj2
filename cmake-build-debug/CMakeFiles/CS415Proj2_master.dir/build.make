@@ -70,29 +70,29 @@ CMakeFiles/CS415Proj2_master.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS415Proj2_master.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/robertsapien/Desktop/CS415Proj2-master/main.cpp -o CMakeFiles/CS415Proj2_master.dir/main.cpp.s
 
-CMakeFiles/CS415Proj2_master.dir/Client.cpp.o: CMakeFiles/CS415Proj2_master.dir/flags.make
-CMakeFiles/CS415Proj2_master.dir/Client.cpp.o: ../Client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/robertsapien/Desktop/CS415Proj2-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CS415Proj2_master.dir/Client.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CS415Proj2_master.dir/Client.cpp.o -c /Users/robertsapien/Desktop/CS415Proj2-master/Client.cpp
+CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o: CMakeFiles/CS415Proj2_master.dir/flags.make
+CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o: ../DAG.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/robertsapien/Desktop/CS415Proj2-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o -c /Users/robertsapien/Desktop/CS415Proj2-master/DAG.cpp
 
-CMakeFiles/CS415Proj2_master.dir/Client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS415Proj2_master.dir/Client.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/robertsapien/Desktop/CS415Proj2-master/Client.cpp > CMakeFiles/CS415Proj2_master.dir/Client.cpp.i
+CMakeFiles/CS415Proj2_master.dir/DAG.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS415Proj2_master.dir/DAG.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/robertsapien/Desktop/CS415Proj2-master/DAG.cpp > CMakeFiles/CS415Proj2_master.dir/DAG.cpp.i
 
-CMakeFiles/CS415Proj2_master.dir/Client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS415Proj2_master.dir/Client.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/robertsapien/Desktop/CS415Proj2-master/Client.cpp -o CMakeFiles/CS415Proj2_master.dir/Client.cpp.s
+CMakeFiles/CS415Proj2_master.dir/DAG.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS415Proj2_master.dir/DAG.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/robertsapien/Desktop/CS415Proj2-master/DAG.cpp -o CMakeFiles/CS415Proj2_master.dir/DAG.cpp.s
 
 # Object files for target CS415Proj2_master
 CS415Proj2_master_OBJECTS = \
 "CMakeFiles/CS415Proj2_master.dir/main.cpp.o" \
-"CMakeFiles/CS415Proj2_master.dir/Client.cpp.o"
+"CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o"
 
 # External object files for target CS415Proj2_master
 CS415Proj2_master_EXTERNAL_OBJECTS =
 
 CS415Proj2_master: CMakeFiles/CS415Proj2_master.dir/main.cpp.o
-CS415Proj2_master: CMakeFiles/CS415Proj2_master.dir/Client.cpp.o
+CS415Proj2_master: CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o
 CS415Proj2_master: CMakeFiles/CS415Proj2_master.dir/build.make
 CS415Proj2_master: CMakeFiles/CS415Proj2_master.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/robertsapien/Desktop/CS415Proj2-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CS415Proj2_master"
