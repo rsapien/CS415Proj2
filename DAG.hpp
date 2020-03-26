@@ -18,25 +18,35 @@ public:
 
     // gets data from the file
     void getData(ifstream& dFile);
-    Client parseData(queue<int>& nums);
+    void parseData(queue<int>& nums);
+
+    Client findSmallest();
 
     //to do
-    void createDAG();
+    void addEdge(Client* client);
     void output();
 
     // add more as needed
 
 private:
-    vector<Client> Clients; // Holds all clients
+    vector<Client*> Clients; // Holds all clients
+
+    Client* end;
+    Client* start;
 
     // add more variables as needed
+    int numVert;
 
 };
 
 struct DAG::Client{
-    Client():sDay{0}, eDay{}, wtp{0}{}
+    Client():sDay{0}, eDay{0}, wtp{0}, s{false}, e{false}{}
+
     vector<Client*> edges;
+    Client* next;
+
     int sDay, eDay, wtp; // start Day, end Day, willing to pay
+    bool s, e;
 
     // add more if necessary
 };

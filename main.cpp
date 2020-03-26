@@ -3,6 +3,7 @@
 //
 
 #include "DAG.hpp"
+#include <string>
 
 using namespace std;
 
@@ -10,7 +11,7 @@ int main() {
     // Getting data file
     ifstream inFile;
     string fName;
-    cout << "Enter the file to read the data: "; cin >> fName; cout << endl;
+    cout << "Enter a file to read in the data: "; cin >> fName; cout << endl;
 
     inFile.open(fName);
     if(!inFile){
@@ -20,6 +21,7 @@ int main() {
 
     DAG dag(inFile);
     inFile.close();
-    // loo at DAG.hpp or README.txt for what needs to get done
+    // look at DAG.hpp or README.txt for what needs to get done
+
     return 0;
 }
