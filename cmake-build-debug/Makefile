@@ -123,32 +123,32 @@ CS415Proj2_master/fast:
 	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/build
 .PHONY : CS415Proj2_master/fast
 
-DAG.o: DAG.cpp.o
+ADJList.o: ADJList.cpp.o
 
-.PHONY : DAG.o
+.PHONY : ADJList.o
 
 # target to build an object file
-DAG.cpp.o:
-	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/DAG.cpp.o
-.PHONY : DAG.cpp.o
+ADJList.cpp.o:
+	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/ADJList.cpp.o
+.PHONY : ADJList.cpp.o
 
-DAG.i: DAG.cpp.i
+ADJList.i: ADJList.cpp.i
 
-.PHONY : DAG.i
+.PHONY : ADJList.i
 
 # target to preprocess a source file
-DAG.cpp.i:
-	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/DAG.cpp.i
-.PHONY : DAG.cpp.i
+ADJList.cpp.i:
+	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/ADJList.cpp.i
+.PHONY : ADJList.cpp.i
 
-DAG.s: DAG.cpp.s
+ADJList.s: ADJList.cpp.s
 
-.PHONY : DAG.s
+.PHONY : ADJList.s
 
 # target to generate assembly for a file
-DAG.cpp.s:
-	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/DAG.cpp.s
-.PHONY : DAG.cpp.s
+ADJList.cpp.s:
+	$(MAKE) -f CMakeFiles/CS415Proj2_master.dir/build.make CMakeFiles/CS415Proj2_master.dir/ADJList.cpp.s
+.PHONY : ADJList.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CS415Proj2_master"
-	@echo "... DAG.o"
-	@echo "... DAG.i"
-	@echo "... DAG.s"
+	@echo "... ADJList.o"
+	@echo "... ADJList.i"
+	@echo "... ADJList.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/robertsapien/Desktop/CS415Proj2-master/DAG.cpp
-DAG.hpp
-/Users/robertsapien/Desktop/CS415Proj2-master/DAG.hpp
+/Users/robertsapien/Desktop/CS415Proj2-master/ADJList.cpp
+ADJList.hpp
+/Users/robertsapien/Desktop/CS415Proj2-master/ADJList.hpp
 
-/Users/robertsapien/Desktop/CS415Proj2-master/DAG.hpp
+/Users/robertsapien/Desktop/CS415Proj2-master/ADJList.hpp
 iostream
 -
 vector
@@ -19,8 +19,4 @@ queue
 -
 fstream
 -
-
-/Users/robertsapien/Desktop/CS415Proj2-master/main.cpp
-DAG.hpp
-/Users/robertsapien/Desktop/CS415Proj2-master/DAG.hpp
 

@@ -2,8 +2,8 @@
 // Created by Robert Sapien on 3/20/20.
 //
 
-#ifndef CS415PROJ2_MASTER_DAG_HPP
-#define CS415PROJ2_MASTER_DAG_HPP
+#ifndef CS415PROJ2_MASTER_ADJLIST_HPP
+#define CS415PROJ2_MASTER_ADJLIST_HPP
 
 #include <iostream>
 #include <vector>
@@ -11,9 +11,9 @@
 #include <fstream>
 using namespace std;
 
-class DAG {
+class ADJList {
 public:
-    DAG(ifstream& dFile);
+    ADJList(string dFile);
     struct Client;
 
     // gets data from the file
@@ -36,10 +36,11 @@ private:
 
     // add more variables as needed
     int numVert;
+    ifstream inFile;
 
 };
 
-struct DAG::Client{
+struct ADJList::Client{
     Client():sDay{0}, eDay{0}, wtp{0}, s{false}, e{false}{}
 
     vector<Client*> edges;
@@ -52,4 +53,4 @@ struct DAG::Client{
 };
 
 
-#endif //CS415PROJ2_MASTER_DAG_HPP
+#endif //CS415PROJ2_MASTER_ADJLIST_HPP
