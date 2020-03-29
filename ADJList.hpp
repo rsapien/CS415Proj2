@@ -21,35 +21,35 @@ public:
     void parseData(queue<int>& nums);
 
     void createAdj();
+    void printAdj();
 
-    void topSort();
-    void output();
+    //void topSort();
+    //void output();
 
 private:
-    void topSortUtil(int vert, bool visited[]);
-
-    vector<Client*> adjClientList; // Holds all clients
-    vector<Client> stack;
+    static vector<Client> ClientList; // Holds all clients
 
     int numVert;
     ifstream inFile;
 
 };
 
-class ADJList::Client{
+class Client{
 public:
-    Client(int s, int e, int w): sDay{s}, eDay{e}, weight{w}{}
+    Client(int s, int e, int w, int v);
 
-    int getSD(){return sDay;}
-    int getED(){return eDay;}
-    int getWight(){return weight;}
+    int getSD();
+    int getED();
+    int getWight();
+    int getCNum();
 
-    bool last(){ return visited;}
-    void setLast(bool v){visited = v;}
+    vector<Client> adjList; // Holds adjacency list
+
+
+
 private:
-    int sDay, eDay, weight; // start Day, end Day, weight
+    int sDay, eDay, weight, cNum; // start Day, end Day, weight
     bool visited;
-    Client* next;
 };
 
 

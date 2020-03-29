@@ -5,6 +5,20 @@
 #include "ADJList.hpp"
 #include <iostream>
 
+// ----- Client Functions ----- //
+
+Client::Client(int s, int e, int w, int v): sDay{s},
+                                    eDay{e},
+                                    weight{w},
+                                    cNum{v},
+                                    visited{false}{}
+int Client::getSD(){return sDay;}
+int Client::getED(){return eDay;}
+int Client::getWight(){return weight;}
+int Client::getCNum(){return cNum;}
+
+// ----- ADJList Functions ----- //
+
 ADJList::ADJList(string dFile): numVert{0} {
     inFile.open(dFile, std::ios::in);
 }
@@ -17,13 +31,14 @@ void ADJList::getData(){
         nums.push(num);
     }
 
-    // creates clients from data and pushes them to vector adjClientList
+    // creates clients from data and pushes them to vector ClientList
     parseData(nums);
 
-    for(auto & Client : adjClientList){
-        //cout << Client->getSD() << " " << Client->getED() << " " << Client->getWight() << endl;
-        numVert++;
-    }
+    /*for(auto & Client : ClientList){
+        cout << Client.getSD() << " " << Client.getED() << " " << Client.getWight() << endl;
+    }*/
+
+    createAdj();
 }
 
 // creates and returns a Client
@@ -40,11 +55,27 @@ void ADJList::parseData(queue<int>& nums){
         w = nums.front();
         nums.pop();
 
-        Client* client = new Client(s, e, w);
-        adjClientList.push_back(client);
+        ++numVert;
+        Client c(s, e, w, numVert);
+        ClientList.push_back(c);
     }
 }
 
 void ADJList::createAdj(){
-    for(int i = 0; i < adjClientList.size(); )
+    for(int i = 0; i < ClientList.size(); i++){
+        for(int j = 0; i < ClientList.size(); i++){
+            if(ClientList[j].getSD() > ClientList[i].getED() && i != j)
+                ClientList[i].adjList.push_back(ClientList[j]);
+        }
+    }
+}
+
+void ADJList::printAdj() {
+    for(int i = 0; i < ClientList.size(); i++){
+        cout << "Client " << ClientList[i].getCNum() << " : ";
+        for(int j = 0; j < ClientList[i].adjList.size(); j++){
+            cout << "c" << ClientList[i].adjList[j].getCNum() << ' ';
+        }
+        cout << endl;
+    }
 }

@@ -25,6 +25,8 @@ int main() {
     ADJList adjList(fName);
     adjList.getData();
 
+    adjList.printAdj();
+
     std::ofstream outFile;
     // look at ADJList.hpp or README.txt for what needs to get done
 
