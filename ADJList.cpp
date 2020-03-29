@@ -3,86 +3,48 @@
 //
 
 #include "ADJList.hpp"
+#include <iostream>
 
 ADJList::ADJList(string dFile): numVert{0} {
-    start = new Client;
-    end = new Client;
-    start->s = true;
-    end->e = true;
-
-    inFile.open(dFile, ios::in);
+    inFile.open(dFile, std::ios::in);
 }
 
 // gets data form file and puts it in fcfs queue
-void ADJList::getData(ifstream& dFile){
+void ADJList::getData(){
     int num;
     queue<int> nums;
-    while(dFile >> num){ // pushes all numbers from file into fcfs queue
+    while(inFile >> num){ // pushes all numbers from file into fcfs queue
         nums.push(num);
     }
 
-    while(!nums.empty()){
-        cout << nums.front() << endl;
-        nums.pop();
-    }
-    // creates clients from data and pushes them to vector Clients
+    // creates clients from data and pushes them to vector adjClientList
     parseData(nums);
 
-    for(int i = 0; i < Clients.size(); i++){
-        cout << Clients[i]->wtp << endl;
+    for(auto & Client : adjClientList){
+        //cout << Client->getSD() << " " << Client->getED() << " " << Client->getWight() << endl;
+        numVert++;
     }
 }
 
 // creates and returns a Client
 void ADJList::parseData(queue<int>& nums){
     while(!nums.empty()){
-        Client* client = new Client;
-        for(int i = 0; i < 3; i++){
-            if(i == 0) {
-                client->sDay = nums.front();
-                Clients.push_back(client);
-                nums.pop();
-            }
-            else if(i == 1) {
-                client->eDay = nums.front();
-                Clients.push_back(client);
-                nums.pop();
-            }
-            else{
-                client->wtp = nums.front();
-                Clients.push_back(client);
-                nums.pop();
-            }
-        }
-        //addEdge(client);
+        int s, e, w;
+
+        s = nums.front();
+        nums.pop();
+
+        e = nums.front();
+        nums.pop();
+
+        w = nums.front();
+        nums.pop();
+
+        Client* client = new Client(s, e, w);
+        adjClientList.push_back(client);
     }
 }
 
-void ADJList::addEdge(Client* client) {
-    if(!start->s){
-        start->edges.push_back(client);
-        client->next = end;
-        end->edges.push_back(client);
-        numVert++;
-    }
-    else{
-        for(int i = 0; i < start->edges.size(); i++){
-            if(start->edges[i]->e < client->s){
-
-            }
-        }
-    }
-
-}
-
-ADJList::Client ADJList::findSmallest(){
-    for(int i = 0; i < Clients.size(); i ++){
-        for(int j = 0; j < Clients.size(); j ++){
-
-        }
-    }
-}
-
-void ADJList::output(){
-
+void ADJList::createAdj(){
+    for(int i = 0; i < adjClientList.size(); )
 }

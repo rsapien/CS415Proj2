@@ -4,6 +4,7 @@
 
 #include "ADJList.hpp"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -15,12 +16,14 @@ int main() {
     ifstream inFile;
     inFile.open(fName);
     if(!inFile.is_open()){
-        cout << "Unable to open file.\nExiting..." << endl;
+        cout << "Unable to open " << fName << ".\nExiting..." << endl;
         exit(1);
     }
+
     inFile.close();
 
-    ADJList dag(fName);
+    ADJList adjList(fName);
+    adjList.getData();
 
     std::ofstream outFile;
     // look at ADJList.hpp or README.txt for what needs to get done

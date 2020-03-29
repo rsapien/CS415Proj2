@@ -5,7 +5,7 @@
 #ifndef CS415PROJ2_MASTER_ADJLIST_HPP
 #define CS415PROJ2_MASTER_ADJLIST_HPP
 
-#include <iostream>
+
 #include <vector>
 #include <queue>
 #include <fstream>
@@ -17,39 +17,39 @@ public:
     struct Client;
 
     // gets data from the file
-    void getData(ifstream& dFile);
+    void getData();
     void parseData(queue<int>& nums);
 
-    Client findSmallest();
+    void createAdj();
 
-    //to do
-    void addEdge(Client* client);
+    void topSort();
     void output();
 
-    // add more as needed
-
 private:
-    vector<Client*> Clients; // Holds all clients
+    void topSortUtil(int vert, bool visited[]);
 
-    Client* end;
-    Client* start;
+    vector<Client*> adjClientList; // Holds all clients
+    vector<Client> stack;
 
-    // add more variables as needed
     int numVert;
     ifstream inFile;
 
 };
 
-struct ADJList::Client{
-    Client():sDay{0}, eDay{0}, wtp{0}, s{false}, e{false}{}
+class ADJList::Client{
+public:
+    Client(int s, int e, int w): sDay{s}, eDay{e}, weight{w}{}
 
-    vector<Client*> edges;
+    int getSD(){return sDay;}
+    int getED(){return eDay;}
+    int getWight(){return weight;}
+
+    bool last(){ return visited;}
+    void setLast(bool v){visited = v;}
+private:
+    int sDay, eDay, weight; // start Day, end Day, weight
+    bool visited;
     Client* next;
-
-    int sDay, eDay, wtp; // start Day, end Day, willing to pay
-    bool s, e;
-
-    // add more if necessary
 };
 
 
