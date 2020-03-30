@@ -18,6 +18,8 @@ int ADJList::Client::getSD(){return sDay;}
 int ADJList::Client::getED(){return eDay;}
 int ADJList::Client::getWeight(){return weight;}
 int ADJList::Client::getCNum(){return cNum;}
+bool ADJList::Client::isVisited(){return visited;}
+void ADJList::Client::setVisited(){visited = true;}
 
 // ----- ADJList Functions ----- //
 
@@ -64,8 +66,10 @@ void ADJList::pData(queue<int>& nums){
 void ADJList::createAdj(){
     for(int i = 0; i < ClientList.size(); i++){
         for(int j = 0; i < ClientList.size(); i++){
-            if(ClientList[j].getSD() > ClientList[i].getED() && i != j)
+            if(ClientList[j].getSD() < ClientList[i].getED() && i != j && !ClientList[j].isVisited()){
+                ClientList[j].setVisited();
                 ClientList[i].adjList.push_back(ClientList[j]);
+            }
         }
     }
 }

@@ -23,6 +23,8 @@ public:
         int getED();
         int getWeight();
         int getCNum();
+        bool isVisited();
+        void setVisited();
 
         vector<Client> adjList; // Holds adjacency list
 
