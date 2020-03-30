@@ -19,7 +19,7 @@ int ADJList::Client::getED(){return eDay;}
 int ADJList::Client::getWeight(){return weight;}
 int ADJList::Client::getCNum(){return cNum;}
 bool ADJList::Client::isVisited(){return visited;}
-void ADJList::Client::setVisited(){visited = true;}
+void ADJList::Client::setVisited(bool b){visited = b;}
 
 // ----- ADJList Functions ----- //
 
@@ -38,6 +38,15 @@ void ADJList::getData(){
     // creates clients from data and pushes them to vector ClientList
     pData(nums);
 
+    /*for(auto & i : ClientList){
+        cout << i.getCNum() << " ";
+        cout << i.getSD() << " ";
+        cout << i.getED() << " ";
+        cout << i.getWeight() << " ";
+        cout << endl;
+    }*/
+
+    // adds adjacent vertices
     createAdj();
 }
 
@@ -65,10 +74,19 @@ void ADJList::pData(queue<int>& nums){
 
 void ADJList::createAdj(){
     for(int i = 0; i < ClientList.size(); i++){
-        for(int j = 0; i < ClientList.size(); i++){
-            if(ClientList[j].getSD() < ClientList[i].getED() && i != j && !ClientList[j].isVisited()){
-                ClientList[j].setVisited();
-                ClientList[i].adjList.push_back(ClientList[j]);
+        for(int j = 0; j < ClientList.size(); j++){
+
+            /*cout << "i = " << i << " j = " << j << endl;
+            cout << "c" << ClientList[i].getCNum() << " c" << ClientList[j].getCNum() << endl;
+            cout << "j: " << ClientList[j].getSD() << endl;
+            cout << "i: " << ClientList[i].getED() << endl << endl;*/
+
+            if(ClientList[j].getSD() > ClientList[i].getED() && i != j){
+                //cout << "hit\n" << endl;
+                if(!checkADJ(ClientList[i].adjList, ClientList[j].getCNum())){
+                    ClientList[i].adjList.push_back(ClientList[j]);
+                    //cout << "added\n";
+                }
             }
         }
     }
@@ -81,5 +99,17 @@ void ADJList::printAdj() {
             cout << "c" << j.getCNum() << ' ';
         }
         cout << endl;
+    }
+}
+
+void ADJList::resetVisited() {
+    for(auto & c : ClientList){
+        c.setVisited(false);
+    }
+}
+
+bool ADJList::checkADJ(vector<ADJList::Client> adj, int num){
+    for(auto & a : adj){
+        if(a.getCNum() == num) return true;
     }
 }

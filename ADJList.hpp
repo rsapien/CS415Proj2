@@ -24,7 +24,7 @@ public:
         int getWeight();
         int getCNum();
         bool isVisited();
-        void setVisited();
+        void setVisited(bool b);
 
         vector<Client> adjList; // Holds adjacency list
 
@@ -39,6 +39,9 @@ public:
 
     void createAdj();
     void printAdj();
+    void resetVisited();
+
+    bool checkADJ(vector<Client> adj, int num);
 
 private:
     vector<Client> ClientList; // Holds all clients
